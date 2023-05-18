@@ -1,7 +1,6 @@
-<footer class="bg-portfolio-bg-darker-gray">
+<footer class="footer">
     <div class="container flex flex-col sm:flex-row justify-between gap-y-10 sm:gap-4 py-14">
-    <div class="flex-1">
-      <!-- Copyright -->
+    <!-- <div class="flex-1">
       <h4 class="font-bold mb-4 text-lg">Copyright© {{ .Site.Copyright | default .Site.Title}}</h4>
       <p class="text-sm mb-2"> 
         <span id="js-year"></span> - {{.Site.Params.author}}
@@ -20,8 +19,20 @@
             <span id="busuanzi_value_site_uv" class="busuanzi_value_site_uv"></span>
           </span>
       </div>
-    </div>
+    </div> -->
+ <!-- Contact me -->
+ <div class="flex-1">        
+  <h4 class="font-bold mb-4 text-lg">Contact Info</h4>
+  <a href="mailto:frygucki@gmail.com?subject=Hello" class="hover">{{.Site.Params.email}}</a>
 
+  <p>3880 Braxton Street
+    Chicago, il 60606</p>
+    <p> 815-515-2603</p>
+
+  <div class="flex gap-4 mt-4">
+    {{-  partial "components/social-media.html" . -}}
+  </div>
+</div>
 
 
     <!-- Quick links -->
@@ -31,16 +42,28 @@
         {{-  partial "components/menu.html" . -}}
       </ul>
     </div>
-    <!-- Contact me -->
-    <div class="flex-1">        
-      <h4 class="font-bold mb-4 text-lg">Contact me</h4>
-      <a href="mailto:frygucki@gmail.com?subject=Hello" class="text-sm hover">{{.Site.Params.email}}</a>
-      <div class="flex gap-4 mt-4">
-        {{-  partial "components/socialshare.html" . -}}
-      </div>
+   
+
+    <div class="flex-1">
+      <h4 class="font-bold mb-4 text-lg">Opening Hours      </h4>
+      <p class="list-none text-sm">
+        <div class="opening-time-line"><div class="opening-time-text">Monday</div><div class="opening-time-text">07:00am - 06:00pm</div></div>
+        <div class="opening-time-line"><div class="opening-time-text">Tuesday</div><div class="opening-time-text">07:00am - 06:00pm</div></div>
+        <div class="opening-time-line"><div class="opening-time-text">Wednesday</div><div class="opening-time-text">07:00am - 06:00pm</div></div>
+        <div class="opening-time-line"><div class="opening-time-text">Thursday</div><div class="opening-time-text">07:00am - 06:00pm</div></div>
+        <div class="opening-time-line"><div class="opening-time-text">Friday</div><div class="opening-time-text">07:00am - 06:00pm</div></div>
+        <div class="opening-time-line"><div class="opening-time-text">Saturday</div><div class="opening-time-text">07:00am - 06:00pm</div></div>
+        <div class="opening-time-line"><div class="opening-time-text">Sunday</div><div class="opening-time-text closed">Closed</div></div>
+
+      </p>
     </div>
+
+
   </div>
 </footer>
+
+<div class="copyright-section"><div class="copyright-block"><div class="copyright-text">© Java Coffee Co. All rights reserved.</div><div class="copyright-text">Template created by <a href="http://www.lightninglab.design" target="_blank" class="footer-link-red">Lightning Lab</a> and proudly powered by <a href="http://www.webflow.com" target="_blank" class="footer-link-red">Webflow.</a> | Template Version: <a href="/template-pages/changelog" class="footer-link-red">V1.5</a></div></div><div class="copyright-block align-right"><div class="stripe-block"><div class="stripe-text">Guaranteed secure payment with</div><img src="https://assets.website-files.com/5d1f6016fd3194054b45be07/5dbd984d4f614822fec74f55_stripe-logo-brown.svg" alt="" class="stripe-logo"></div></div></div>
+
 <button class="scrollToTopBtn showBtn">
     <i class="fa-solid fa-plane-up"></i>
 </button>

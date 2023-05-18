@@ -821,13 +821,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .text-portfolio-text-light-gray{
-  --tw-text-opacity: 1;
-  color: rgb(43 45 66 / var(--tw-text-opacity));
+  color: rgb(255, 255, 255);
 }
 
 .text-portfolio-text-dark-gray{
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
+  color: rgb(255, 255, 255);
 }
 .text-bakery-subheading{
   color: #ee6c4d;
@@ -1131,7 +1129,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   min-height: 50px;
   position: relative;
   opacity: 0;
-  color: #ff9f1c;
+  color: #be4632;
 }
 
 .overlay ul li a {
@@ -1399,6 +1397,11 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-bottom: 1.5rem;
   }
 
+  .md\:text-6xl{
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+  
   .md\:text-8xl{
     font-size: 6rem;
     line-height: 1;
