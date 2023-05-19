@@ -10,6 +10,7 @@
     background-size: cover
 }
 
+
 .nav-bar{
     border-bottom: 1px solid hsla(0,0%,100%,.2);
     background-color: transparent;
@@ -52,12 +53,14 @@ img {
     border: 0;
     max-width: 100%;
     vertical-align: middle;
-    display: inline-block
+    display: inline-block;
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    opacity: 1;
+    transform-style: preserve-3d;
 }
 
 .footer{
     background-color: #1f1919;
-    max-width: 1280px;
     margin-right: auto;
     margin-left: auto;
     padding-right: 32px;
@@ -129,4 +132,207 @@ img {
     display: flex;
     padding: 32px 56px;
     background-color: #110e0e;
+}
+
+
+.menu-shrink {
+	transition: all 0.3s ease-in-out;
+	padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+	border-bottom: 1px solid;
+    background-color: #582f0e;
+    opacity: 1;
+}
+#top-nav{
+	transition: all 0.3s ease-in-out; 
+}
+
+.section {
+    padding-top: 120px;
+    padding-bottom: 120px
+}
+
+.section.colored-bg {
+    background-color: #fefcfa;
+    background-image: url("https://assets.website-files.com/5d1f6016fd3194054b45be07/5d1fb0c96ce213c2a8526492_Topographic%20pattern%20dark%20seetrough.svg");
+    background-position: 50% 50%;
+    background-size: 50%;
+    background-repeat: repeat
+}
+
+.section.colored-bg.with-heading {
+    padding-top: 104px;
+    background-image: url("https://assets.website-files.com/5d1f6016fd3194054b45be07/5dbd72494f6148186ac6a0d4_Topographic%20pattern%20dark%20brown%20trans.svg")
+}
+
+.section-title {
+    margin-top: 0;
+    margin-bottom: 24px;
+    text-transform: capitalize;
+}
+h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: 'Crimson Text',sans-serif;
+    font-size: 42px;
+    line-height: 48px;
+    font-weight: 400;
+}
+
+
+
+.menu-item-title {
+    display: inline-block;
+    font-family: 'Crimson Text',sans-serif;
+    font-size: 24px;
+    line-height: 30px
+}
+
+
+
+.collection-list {
+  display: flex;
+  flex-wrap: wrap; 
+}
+.menu-item{
+    flex: 1 1 250px; /* Adjust the width of the columns as needed */
+    padding: 10px;
+    margin: 1rem;
+    box-sizing: border-box;
+    background-color: #a68a64;
+    padding: 1rem ;
+    border-radius: 25px;
+    box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.10);
+}
+.menu-item img{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    
+}
+
+.menu-item-wrapper {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1
+}
+.checked {
+color: #582f0e;
+}
+
+  .coffee-intensity {
+    width: 100px; /* Adjust the width as needed */
+    height: .7em; /* Adjust the height as needed */
+    background-color: #f0ead2; /* Adjust the background color as needed */
+    border-radius: 5px; /* Adjust the border radius as needed */
+    overflow: hidden;
+  }
+  
+  .intensity-bar {
+    display: block;
+    height: 100%;
+    background-color:#582f0e; /* Adjust the bar color as needed */
+  }
+  
+
+  .section.newsletter {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(31,25,25,.5)),to(rgba(31,25,25,.5))),url("https://assets.website-files.com/5d1f6016fd3194054b45be07/5d2f5ff736656903b002e670_yohan-cho-QT-GwKOoddg-unsplash(1).jpg");
+    background-image: linear-gradient(180deg,rgba(31,25,25,.5),rgba(31,25,25,.5)),url("https://assets.website-files.com/5d1f6016fd3194054b45be07/5d2f5ff736656903b002e670_yohan-cho-QT-GwKOoddg-unsplash(1).jpg");
+    background-position: 0 0,50% 50%;
+    background-size: auto,cover;
+    background-repeat: repeat,no-repeat;
+    background-attachment: scroll,fixed
+}
+
+
+.insta-block {
+    position: relative;
+    overflow: hidden;
+    height: 240px;
+    -webkit-box-flex: 1 1 100px;
+    -webkit-flex: 1 1 100px;
+    -ms-flex: 1 1 100px;
+    flex: 1 1 100px;
+}
+
+.insta-block.block-1 {
+    background-image: url("https://assets.website-files.com/5d1f6016fd3194054b45be07/5d223c912e58b7b573cbb550_devin-avery-535371-unsplash.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat
+}
+
+.insta-block.block-2 {
+    background-image: url("https://assets.website-files.com/5d1f6016fd3194054b45be07/5d223c8f2e58b75904cbb54f_gregory-hayes-MjvOQ__XFgI-unsplash(1).jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat
+}
+
+.insta-block.block-3 {
+    background-image: url("https://assets.website-files.com/5d1f6016fd3194054b45be07/5d223c8dc79ae8dffb9d4ce8_nathan-dumlao-6Lh0bRb9LOA-unsplash(1).jpg");
+    background-position: 50% 50%;
+    background-size: cover
+}
+
+.insta-block.block-4 {
+    background-image: url("https://assets.website-files.com/5d1f6016fd3194054b45be07/5d223c8ec79ae869c89d4ceb_nicolas-j-leclercq-743353-unsplash.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat
+}
+
+.insta-block.block-5 {
+    background-image: url("https://assets.website-files.com/5d1f6016fd3194054b45be07/5d223c8d420c54a4223b47e0_jason-wong-349777-unsplash.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat
+}
+
+.insta-block.block-6 {
+    background-image: url("https://assets.website-files.com/5d1f6016fd3194054b45be07/5d223c8dc79ae88da49d4ce9_battlecreek-coffee-roasters-HFho7UTIvlw-unsplash(1).jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat
+}
+
+.insta-section {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.insta-block-logo {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    width: 24px
+}
+
+.insta-block-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: rgba(190,70,50,.5);
+    color: #fff;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+    text-decoration: none
 }

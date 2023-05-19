@@ -948,7 +948,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .hover:hover{
   --tw-text-opacity: 1;
-  color: #2ec4b6;
+  color: #c2c5aa;
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
 }
@@ -1169,7 +1169,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 .resume .resume-item {
   padding: 0 0 20px 20px;
   margin-top: -2px;
-  border-left: 2px solid #ffb703;
+  border-left: 2px solid #f0ead2;
   position: relative;
 }
 
@@ -1182,7 +1182,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: -9px;
   top: 0;
   background: #fff;
-  border: 2px solid #ffb703;
+  border: 2px solid #f0ead2;
 }
 #menu ul li{
   list-style: none;
@@ -1190,7 +1190,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 0;
 }
 #menu .active {
-  color: #ffb703;
+  color: #f0ead2;
   font-size: 1.15rem;
 }
 .overlay ul li a:hover:after,
@@ -1449,13 +1449,3 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 
-.aboutImage{
-  border: 1px none #2ec4b6;
-  border-radius: 50%;
-  box-shadow: 2px 2px 8px 0 #ff9f1c;
-  opacity: 1;
-  width: 80%;
-  cursor: pointer;
-  -o-object-fit: fill;
-  object-fit: fill;
-}

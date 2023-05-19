@@ -767,7 +767,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .text-base{
-  font-size: 1rem;
+  font-size: .8rem;
   line-height: 1.5rem;
 }
 
@@ -907,18 +907,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   align-items: center;
   gap: 0.5rem;
   border-width: 1px;
-  --tw-border-opacity: 1;
-  border-bottom-color: rgb(236 233 228 / var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: rgb(236 233 228 / var(--tw-bg-opacity));
+  border-color: #582f0e;
+  background-color: #936639;
   padding-left: 2rem;
   padding-right: 2rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-weight: 700;
   letter-spacing: 0.05em;
-  --tw-text-opacity: 1;
-  color: rgb(17 17 17 / var(--tw-text-opacity));
+  color: #f0ead2;
   transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
@@ -929,9 +926,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .btn:hover{
   background-color: transparent;
-  --tw-text-opacity: 1;
-  color: #ff9f1c;
-  /* color: rgb(236 233 228 / var(--tw-text-opacity)); */
+  color: #ff4b3e;
 }
 
 .hover{
@@ -1154,6 +1149,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 #about  .resume h1,h2,h3,h4,h5,p {
   margin: 2px 0;
 }
+.text-color{
+  color: #000;
+}
 #about h5{
   padding: 3px;
   background: #2ec4b6;
@@ -1174,24 +1172,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   position: relative;
 }
 
-.resume .resume-item::before {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border-radius: 50px;
-  left: -9px;
-  top: 0;
-  background: #fff;
-  border: 2px solid #ffb703;
-}
+
 #menu ul li{
   list-style: none;
   margin: 0;
   padding: 0;
 }
 #menu .active {
-  color: #ffb703;
+  color: #f0ead2;
+  font-weight: bold;
   font-size: 1.15rem;
 }
 .overlay ul li a:hover:after,

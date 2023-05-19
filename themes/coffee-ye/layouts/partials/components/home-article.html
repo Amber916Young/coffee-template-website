@@ -1,0 +1,65 @@
+
+<section>
+  <div class="container">
+    {{ range first 3 ( where .Site.RegularPages  "Type" "in" (slice "posts") ) }}
+
+    {{ if     eq .Params.Cover.image "null" }}
+    <div class="flex flex-col  justify-between sm:flex-row gap-6 mb-14 text-color">
+      <div class="w-full ">
+        <h1 class="text-xl sm:text-4xl font-bold mb-2 sm:mb-4">
+        {{.Params.Title}}
+        </h1>
+        <h2 class="text-lg sm:text-3xl font-medium mb-6">
+          {{.Params.SubTitle}}
+        </h2>
+        <h3 class="text-base text-bakery-subheading mb-12">
+          {{ .Params.Description }}
+        </h3>
+        <a  href="javascript:void(0)" onclick="verifyPass('{{ .Permalink }}',1)"><button type="button" class="btn">
+            Check it out
+            <i class="fa-solid fa-arrow-right"></i></button></a>
+      </div>
+    </div>
+      {{ else if     eq .Params.Cover.Position "left" }}
+        <div class="flex flex-col justify-between sm:flex-row gap-6 mb-14 text-color">
+          <img src="{{.Params.Cover.image}}"  alt="{{.Params.Cover.Alt}}" class="w-full md:object-cover sm:w-2/5">
+          <div class="w-full sm:w-1/2">
+            <h1 class="text-xl sm:text-4xl font-bold mb-2 sm:mb-4">
+            {{.Params.Title}}
+            </h1>
+            <h2 class="text-lg sm:text-3xl font-medium mb-6">
+              {{.Params.SubTitle}}
+            </h2>
+            <h3 class="text-base text-bakery-subheading mb-12">
+              {{ .Params.Description }}
+            </h3>
+            <a  href="javascript:void(0)" onclick="verifyPass('{{ .Permalink }}',1)"><button type="button" class="btn">
+                Our Story
+                <i class="fa-solid fa-arrow-right"></i></button></a>
+          </div>
+        </div>
+      {{ else }}
+        <div class="flex flex-col-reverse justify-between sm:flex-row gap-6 mb-14 text-color">
+          <div class="w-full sm:w-1/2">
+            <h1 class="text-xl sm:text-4xl font-bold mb-2 sm:mb-4">
+            {{.Params.Title}}
+            </h1>
+            <h2 class="text-lg sm:text-3xl font-medium mb-6">
+              {{.Params.SubTitle}}
+            </h2>
+            <h3 class="text-base text-bakery-subheading mb-12">
+              {{ .Params.Description }}
+            </h3>
+            <a   href="javascript:void(0)" onclick="verifyPass('{{ .Permalink }}',1)"><button type="button" class="btn">
+                Our Story
+                <i class="fa-solid fa-arrow-right"></i></button></a>
+          </div>
+          <img src="{{.Params.Cover.image}}" alt="{{.Params.Cover.Alt}}" class="w-full md:object-cover sm:w-2/5">
+        </div>
+      {{ end }}
+    
+    {{ end }}
+  </div>
+
+  
+</section>
