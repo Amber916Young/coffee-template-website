@@ -66,6 +66,9 @@ body {
 main{
   font-family: sans-serif , -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', ;
 }
+.font-wix{
+  font-family:'Wix Madefor Text','Montserrat','sans-serif';
+}
 /*
 1. Add the correct height in Firefox.
 2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
@@ -944,7 +947,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .hover:hover{
   --tw-text-opacity: 1;
-  color: #2ec4b6;
+  color: #fad643;
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
 }
@@ -1152,9 +1155,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-color{
   color: #000;
 }
+.text-color2{
+  color: #7f4f24;
+}
+.text-color3{
+  color: #0a0908;
+}
 #about h5{
   padding: 3px;
-  background: #2ec4b6;
+  background: #fad643;
 }
 #about  ul strong {
   margin-right: 10px;
@@ -1436,14 +1445,3 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
-
-.aboutImage{
-  border: 1px none #2ec4b6;
-  border-radius: 50%;
-  box-shadow: 2px 2px 8px 0 #ff9f1c;
-  opacity: 1;
-  width: 80%;
-  cursor: pointer;
-  -o-object-fit: fill;
-  object-fit: fill;
-}

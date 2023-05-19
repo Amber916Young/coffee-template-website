@@ -1,0 +1,31 @@
+{{- define "main" }}
+<div class=" h-screen " style="height: 50vh;">
+</div>
+<section class="section colored-bg with-heading" style="padding:0">
+
+
+
+    <div class=" sm:my-14   ">
+      <div class=" container flex flex-col sm:flex-row ">  
+        <div class="w-full sm:w-10 sm:mt-10">
+
+            {{ range (.Paginate (.Site.RegularPages.GroupByDate "2006-01")).PageGroups }}
+            <div class="result" role="group">
+                <!-- add day manually to parse as date-->
+                {{ $month := printf "%s%s" .Key "-01"}}
+                <h2 class="result__title text-color2">{{ $month | time.Format "January 2006" }}</h2>
+                {{ range .Pages }}
+
+                {{ partial "components/archiveItem.html" (dict "context" .) }}
+
+                {{ end }}
+            </div>
+            {{ end }}
+        </div>
+      </div>
+    </div>
+
+    {{ partial "components/pagination.html" . }}
+
+  </section>
+{{- end }}
