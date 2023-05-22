@@ -51,10 +51,8 @@ disqus_shortname = "https-amber916young-github-io"
   aboutImage = "https://i.328888.xyz/2023/03/19/Pf8MH.png"
   [[params.social]]
       url   = "https://leetcode.com/BirdyYang/"
-      icon  = "fa-solid fa-bug  fa-lg" 
-  [[params.social]]
-      url   = "https://github.com/Amber916Young"
-      icon  = "fa-brands fa-github  fa-lg" 
+      icon  = "fa-brands fa-weibo  fa-lg" 
+
   [[params.social]]
       url   = "https://www.linkedin.com/in/yejia-yang-11105722a/"
       icon  = "fa-brands fa-linkedin fa-lg"
@@ -88,7 +86,7 @@ sectionPagesMenu = "main"
     name = "Store"
     # pre = '<i class="fa-solid fa-store"></i>'
     identifier = "store"
-    url = "/store/"
+    url = "/stores/"
     weight = 2
   [[menu.main]]
     name = "Blog"

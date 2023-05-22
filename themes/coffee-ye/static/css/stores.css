@@ -1,0 +1,148 @@
+ul {
+    list-style-type: none;
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+  }
+  
+  ul li h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  ul li ul {
+    margin-left: 20px;
+    border-left: 2px solid #ccc;
+    padding-left: 10px;
+  }
+  
+  ul li ul li h3 {
+    font-size: 16px;
+    margin-bottom: 3px;
+  }
+  
+  ul li ul li ul {
+    margin-left: 20px;
+    border-left: 2px solid #ccc;
+    padding-left: 10px;
+    list-style-type: none;
+
+  }
+  
+  ul li ul li ul li {
+    margin-bottom: 3px;
+  }
+  
+  ul li ul li ul li:before {
+    content: "->";
+    margin-right: 5px;
+    color: #333;
+  }
+  
+  ul li ul li ul li:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Optional: Add some hover effect for better interactivity */
+  ul li ul li ul li:hover {
+    background-color: #f5f5f5;
+  }
+  
+  
+  .container-menu {
+    display: flex;
+  }
+  
+  .sidebar {
+    flex: 0 0 300px;
+    padding: 20px;
+  }
+  
+  .content {
+    flex: 1;
+  }
+  
+
+/* Additional styling */
+
+  .sidebar {
+    /* border: 1px solid #ccc; */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .content {
+    /* border: 1px solid #ccc; */
+    padding: 20px;
+
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .product-card {
+    background-color: #fff;
+    padding: 20px;
+      transition: transform 0.3s ease;
+
+  }
+  
+  .product-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .price {
+    font-weight: bold;
+  }
+  .product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.category-tree {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .category-heading {
+    cursor: pointer;
+  }
+  
+  .subcategory-list {
+    list-style-type: none;
+    margin-left: 20px;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease;
+  }
+  
+  .subcategory-list--expanded {
+    max-height: 1000px; /* Adjust the max-height value as needed */
+    animation: expandAnimation 1s ease forwards;
+  }
+  
+  @keyframes expandAnimation {
+    from {
+      max-height: 0;
+    }
+    to {
+      max-height: 1000px; /* Adjust the max-height value as needed */
+    }
+  }
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+  

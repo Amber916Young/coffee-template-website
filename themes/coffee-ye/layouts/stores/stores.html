@@ -1,0 +1,120 @@
+{{- define "main" }}
+<link rel="stylesheet" href="/css/stores.css" /> 
+
+<div style="height: 50vh;"></div>
+<section class="section colored-bg with-heading text-color3 " style="padding:0">
+
+    <div class=" sm:my-14   ">
+      <div class=" container flex flex-col sm:flex-row ">  
+        <div class="w-full sm:w-10 sm:mt-10 " >
+          <h1>{{ .Title }}</h1>
+          <div class="container-menu">
+            <div class="sidebar">
+
+              
+
+              <ul class="category-tree">
+                <li>
+                  <h3 class="category-heading">Coffee</h3>
+                  <ul class="subcategory-tree">
+                    <li>
+                      <h4 class="category-heading">SALE: Pre-Christmas Roast</h4>
+                      <ul class="subcategory-list">
+                        <li>Product 1</li>
+                        <li>Product 2</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <h4 class="category-heading">Single Origin</h4>
+                      <ul class="subcategory-list">
+                        <li>Product 3</li>
+                        <li>Product 4</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <h3 class="category-heading">Tools & Accessories</h3>
+              
+                </li>
+
+
+                <li>
+                  <h3 class="category-heading">Test</h3>
+                  <ul class="subcategory-tree">
+                    <li>
+                      <h4 class="category-heading">SALE: Pre-Christmas Roast</h4>
+                      <ul class="subcategory-list">
+                        <li>Product 1</li>
+                        <li>Product 2</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <h4 class="category-heading">Single Origin</h4>
+                      <ul class="subcategory-list">
+                        <li>Product 3</li>
+                        <li>Product 4</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+
+
+
+
+              </ul>
+
+
+            </div>
+          
+            <div class="content">
+              <div class="product-list">
+                <div class="product-card" data-category="SALE: Pre-Christmas Roast">
+                  <img src="https://cdn.shopify.com/s/files/1/0508/3234/3189/products/RubberSealLRSQ_1400x.jpg?v=1631382093" alt="Product 1">
+                  <h3>Product 1</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <p class="price">$19.ww99</p>
+                </div>
+
+                <div class="product-card" data-category="Tools & Accessories">
+                  <img src="https://cdn.shopify.com/s/files/1/0508/3234/3189/products/RubberSealLRSQ_1400x.jpg?v=1631382093" alt="Product 1">
+                  <h3>Product 1</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <p class="price">$19.99</p>
+                </div>
+
+
+                <div class="product-card" data-category="Single Origin">
+                  <img src="https://cdn.shopify.com/s/files/1/0508/3234/3189/products/RubberSealLRSQ_1400x.jpg?v=1631382093" alt="Product 1">
+                  <h3>Product 1</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <p class="price">$19.99</p>
+                </div>
+
+
+                <div class="product-card" data-category="Single Origin">
+                  <img src="https://cdn.shopify.com/s/files/1/0508/3234/3189/products/RubberSealLRSQ_1400x.jpg?v=1631382093" alt="Product 1">
+                  <h3>Product 1</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <p class="price">$19.99</p>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+    
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+
+  <script src="/js/stores.js"></script>
+
+
+{{- end }}
