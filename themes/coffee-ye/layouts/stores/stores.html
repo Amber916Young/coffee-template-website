@@ -1,5 +1,5 @@
 {{- define "main" }}
-<link rel="stylesheet" href="/css/stores.css" /> 
+<link rel="stylesheet" href="/css/stores.css?v=1" /> 
 
 <div style="height: 50vh;"></div>
 <section class="section colored-bg with-heading text-color3 " style="padding:0">
@@ -11,95 +11,65 @@
           <div class="container-menu">
             <div class="sidebar">
 
+        
+
+           
+              <div id="category-tree"></div>
+
+              <script src="{{ "js/categories.js" | absURL }}"></script>
+              <script>
+                const categories = {{ .Site.Taxonomies.categories}};
+                var cateList= []
+                for(var item in categories){
+                  var cate = item.split("/")
+                  var products = []
+                  var json = {}
+                  if(cate[0] === "stores"){
+                    for(var i = 0; i < categories[item].length ; i++){
+                      products.push(categories[item][i].Page.Title)
+                    }
+                    item = item.replace("stores/","")
+                    json.category = item
+                    json.products = products
+                    cateList.push(json)
+                  }
+                }
+                var parentElement = document.getElementById("category-tree");
+                if (parentElement) {
+                  var categoryTree = buildCategoryTree(cateList, parentElement);;
+                  console.info(categoryTree);
+                } else {
+                  console.error("Parent element not found.");
+                }
+  
+              </script>
+
+          
               
-
-              <ul class="category-tree">
-                <li>
-                  <h3 class="category-heading">Coffee</h3>
-                  <ul class="subcategory-tree">
-                    <li>
-                      <h4 class="category-heading">SALE: Pre-Christmas Roast</h4>
-                      <ul class="subcategory-list">
-                        <li>Product 1</li>
-                        <li>Product 2</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <h4 class="category-heading">Single Origin</h4>
-                      <ul class="subcategory-list">
-                        <li>Product 3</li>
-                        <li>Product 4</li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-
-                <li>
-                  <h3 class="category-heading">Tools & Accessories</h3>
-              
-                </li>
-
-
-                <li>
-                  <h3 class="category-heading">Test</h3>
-                  <ul class="subcategory-tree">
-                    <li>
-                      <h4 class="category-heading">SALE: Pre-Christmas Roast</h4>
-                      <ul class="subcategory-list">
-                        <li>Product 1</li>
-                        <li>Product 2</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <h4 class="category-heading">Single Origin</h4>
-                      <ul class="subcategory-list">
-                        <li>Product 3</li>
-                        <li>Product 4</li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-
-
-
-
-
-              </ul>
-
-
             </div>
           
             <div class="content">
               <div class="product-list">
-                <div class="product-card" data-category="SALE: Pre-Christmas Roast">
-                  <img src="https://cdn.shopify.com/s/files/1/0508/3234/3189/products/RubberSealLRSQ_1400x.jpg?v=1631382093" alt="Product 1">
-                  <h3>Product 1</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  <p class="price">$19.ww99</p>
+                {{ range .Data.Pages }}
+                <div class="product-card" data-id="1"  data-category="{{ .Params.categories}}">
+                  <img src="{{.Params.Cover.image}}"  alt="{{.Params.Cover.Alt}}">
+                  <h3>{{ .Title }}</h3>
+                  <p>{{ .Description }}</p>
+                  <p class="price">{{ .Params.price }}</p>
                 </div>
-
-                <div class="product-card" data-category="Tools & Accessories">
-                  <img src="https://cdn.shopify.com/s/files/1/0508/3234/3189/products/RubberSealLRSQ_1400x.jpg?v=1631382093" alt="Product 1">
-                  <h3>Product 1</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  <p class="price">$19.99</p>
-                </div>
-
-
-                <div class="product-card" data-category="Single Origin">
-                  <img src="https://cdn.shopify.com/s/files/1/0508/3234/3189/products/RubberSealLRSQ_1400x.jpg?v=1631382093" alt="Product 1">
-                  <h3>Product 1</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  <p class="price">$19.99</p>
-                </div>
+                {{ end }}
+      
+                <!-- {{ range .Data.Pages }}
+                <h2>{{ .Title }}</h2>
+                <p>{{ .Description }}</p>
+                <p>Price: {{ .Params.price }}</p>
+                {{ range .Params.images }}
+                  <img src="{{ . }}" alt="Product Image">
+                {{ end }}
+                <hr>
+              {{ end }} -->
 
 
-                <div class="product-card" data-category="Single Origin">
-                  <img src="https://cdn.shopify.com/s/files/1/0508/3234/3189/products/RubberSealLRSQ_1400x.jpg?v=1631382093" alt="Product 1">
-                  <h3>Product 1</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  <p class="price">$19.99</p>
-                </div>
               </div>
             </div>
 

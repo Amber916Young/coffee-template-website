@@ -9,8 +9,7 @@ type: stores
 label: "orginal"
 author: tothemoon
 tags: ["tag1"]
-categories: ["Clothing/Woman"]
-
+categories: ["Clothing", "Woman"]
 cover:
     position: <left,right>
     image: "null"

@@ -25,7 +25,14 @@ disqus_shortname = "https-amber916young-github-io"
   category = "categories"
   archive = "archives"
 
+[mediaTypes]
+  [mediaTypes."text/html"]
+    suffixes = ["htm", "html"]
 
+  [mediaTypes."application/javascript"]
+    suffixes = ["js"]
+
+    
 [permalinks]
   post = "/:year/:month/:title/"
 
