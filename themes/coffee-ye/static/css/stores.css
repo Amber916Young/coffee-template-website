@@ -82,16 +82,15 @@ ul {
 
 .product-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Minimum width of 200px, maximum width of 1 fractional unit */
+    grid-template-columns: minmax(200px, 1fr) minmax(200px, 1fr) minmax(200px, 1fr);
     word-wrap: break-word;
-    grid-gap: 20px;
+    grid-gap: 10px;
   }
   
   .product-card {
     background-color: #fff;
-    padding: 20px;
-      transition: transform 0.3s ease;
-
+    padding: 10px;
+    transition: transform 0.3s ease;
   }
   
   .product-card img {

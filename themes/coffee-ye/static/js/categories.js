@@ -15,7 +15,6 @@
     categories.forEach(function(category) {
       var categoryParts = category.category.split("/");
       var currentUl = rootUl;
-      
       categoryParts.forEach(function(part) {
         var li = currentUl.querySelector("li[data-category='" + part + "']");
         
@@ -25,7 +24,10 @@
           
           var h3 = document.createElement("h3");
           h3.classList.add("category-heading");
-          h3.textContent = part.charAt(0).toUpperCase() + part.slice(1);
+          var name = part.charAt(0).toUpperCase() + part.slice(1);
+          name = name.replaceAll("-"," ");
+          name = name.replaceAll("@","-");
+          h3.textContent = name;
           li.appendChild(h3);
           
           var ul = document.createElement("ul");

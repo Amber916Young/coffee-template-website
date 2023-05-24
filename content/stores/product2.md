@@ -7,7 +7,7 @@ draft: false
 type: stores
 price: "$123"
 author: tothemoon
-categories: "stores/tool/SALE: Pre-Christmas Roast"
+categories: "stores/tool/roast"
 images: ["null"]
 cover:
     position: <left,right>

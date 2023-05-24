@@ -44,17 +44,29 @@ categoryHeadings.forEach((heading,index) => {
    // Get the category name of the clicked heading
 
 
-   console.info(categoryName)
 
 
 
 
    productCards.forEach(card => {
         const cardCategory = card.getAttribute('data-category').split("/");
+        var categoryNameLower = categoryName.toLowerCase()
         
-        if (cardCategory.includes(categoryName)) {
+
+
+        for(var i =0;i<cardCategory.length;i++){
+          var item = cardCategory[i]
+          var name = item.charAt(0).toUpperCase() + item.slice(1)
+          name = name.toLowerCase()
+          name = name.replaceAll(":","")
+          name = name.replaceAll("@","-")
+
+          if (categoryNameLower === name) {
             card.style.display = 'block'
+            break
+          }
         }
+       
     });
         
 

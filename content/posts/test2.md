@@ -9,7 +9,7 @@ type: stores
 label: "orginal"
 author: tothemoon
 tags: ["tag1"]
-categories: ["Clothing", "Woman"]
+categories: ["Clothing", "SALE: Pre-Christmas Roast"]
 cover:
     position: <left,right>
     image: "null"

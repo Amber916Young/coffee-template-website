@@ -1,13 +1,13 @@
 ---
-title: "Prduct1"
-date: 2023-05-22T16:07:05+01:00
+title: "Produc3"
+date: 2023-05-24T16:45:22+01:00
 subTitle: ""
-description: "DescriptionDescriptionDescriptionDescription"
+description: ""
 draft: false
 type: stores
-price: "$12.23"
+price: "$112"
 author: tothemoon
-categories: "stores/Coffee/SALE: Pre@Christmas Roast"
+categories: "stores/tool/roast"
 images: ["null"]
 cover:
     position: <left,right>
