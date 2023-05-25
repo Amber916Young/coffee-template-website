@@ -19,7 +19,6 @@
               <script src="{{ "js/categories.js" | absURL }}"></script>
               <script>
                 const categories = {{ .Site.Taxonomies.categories}};
-                console.info(categories)
 
                 var cateList= []
                 for(var item in categories){
@@ -36,6 +35,9 @@
                     cateList.push(json)
                   }
                 }
+
+                console.info(JSON.stringify(cateList))
+
                 var parentElement = document.getElementById("category-tree");
                 if (parentElement) {
                   var categoryTree = buildCategoryTree(cateList, parentElement);;

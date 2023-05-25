@@ -79,10 +79,24 @@ ul {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   }
 
+  @media (max-width: 768px) {
+    .product-list {
+      grid-template-columns: minmax(200px, 1fr); /* Change to two columns on smaller screens */
+    }
+    .container-menu{
+      display: block;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .product-list {
+      grid-template-columns: minmax(200px, 1fr) minmax(200px, 1fr) minmax(200px, 1fr);
+
+    }
+  }
 
 .product-list {
     display: grid;
-    grid-template-columns: minmax(200px, 1fr) minmax(200px, 1fr) minmax(200px, 1fr);
     word-wrap: break-word;
     grid-gap: 10px;
   }
@@ -140,12 +154,8 @@ ul {
       max-height: 1000px; /* Adjust the max-height value as needed */
     }
   }
-  @media (max-width: 767px) {
-    .container-menu{
-      display: block;
-      /* Add any other necessary styles to reset the layout */
-    }
-  }
+
+
   
   #category-tree ul {
     padding-left: 10px;

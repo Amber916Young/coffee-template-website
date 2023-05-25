@@ -2,17 +2,13 @@
 const categoryHeadings = document.querySelectorAll('.category-heading');
 
 const productLists = document.querySelectorAll('.product-list');
-
-
-
 // Get all products
 const productCards = document.querySelectorAll('.product-card');
-
-
 // Add click event listener to each category heading
 categoryHeadings.forEach((heading,index) => {
   heading.addEventListener('click', () => {
 
+    console.info(categoryHeadings);
 
     const subcategoryLists = document.querySelectorAll('.subcategory-list');
      subcategoryLists.forEach(subcategoryList => {
