@@ -55,11 +55,15 @@
             <div class="content">
               <div class="product-list">
                 {{ range .Data.Pages }}
-                <div class="product-card" data-id="1"  data-category="{{ .Params.categories}}">
+                <div class="product-card " data-id="1"  data-category="{{ .Params.categories}}">
                   <img src="{{.Params.Cover.image}}"  alt="{{.Params.Cover.Alt}}">
                   <h3>{{ .Title }}</h3>
                   <p>{{ .Description }}</p>
                   <p class="price">{{ .Params.price }}</p>
+                  <div class="store  flex justify-end mt-10">
+                    <a href="{{ .Permalink }}" class=" btn btn-primary">View</a>
+                  </div>
+
                 </div>
                 {{ end }}
       

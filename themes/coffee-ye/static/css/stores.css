@@ -102,8 +102,10 @@ ul {
   }
   
   .product-card {
+    position:relative;
     background-color: #fff;
     padding: 10px;
+    height: 28rem;
     transition: transform 0.3s ease;
   }
   
@@ -160,3 +162,23 @@ ul {
   #category-tree ul {
     padding-left: 10px;
   }
+
+  .store{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+
+.store .btn{
+  padding: 0.2em;
+  width: 4em;
+  text-align: center;
+  display: block;
+}
+
+
+.store .btn:hover{
+  border: 0;
+  background-color: transparent;
+
+}
