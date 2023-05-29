@@ -2,23 +2,79 @@
 <div style="height: 30vh;"></div>
 
 <section class="section colored-bg with-heading text-color" style="padding:0">
-    <div class="container sm:my-14">
-      <div class="flex flex-col sm:flex-row ">  
-        <div class="w-full sm:w-10 sm:mt-10">
+    <div class="container pt-8 pb-14">
+        <div class="w-full  sm:mt-10">
           <div class="page-title">
             <h1>{{ .Title }}</h1>
           </div>
-         
-
-            
-
-            <div class="mt-10">
-              {{ .Content }}
+          <div class="flex flex-wrap">
+            <div class="sm:w-2/5 ">
+              {{ partial "components/carousel.html" . }}
+  
             </div>
-      
+            <div class="sm:w-3/5 ">
+              <div class="product-details">
+                <h1 class="product-title">{{ .Title }}</h1>
+                <p class="product-description">{{ .Params.description }}</p>
+                <p class="product-price">Price: {{ .Params.price }}</p>
+                <!-- Additional product details -->
+                {{ .Content }}
+              </div>
+
+             
+  
+            </div>
+          </div>
+
+
+
+          
 
         </div>
-      </div>
-      </div>
+    </div>
+  <!-- Related Products Section -->
+  <div class="container pb-14">
+    <h2>Related Products</h2>
+    <div class="flex flex-wrap">
+      {{ range where .Site.RegularPages "Section" "stores" }}
+          <div class="sm:w-1/4 md:px-4">
+            <div class="related-product">
+              <img src="{{ .Params.Cover.image }}" alt="Related Product Image">
+              <h3>{{ .Title }}</h3>
+              <!-- <p>{{ .Params.description }}</p> -->
+            </div>
+          </div>
+      {{ end }}
+    </div>
+  </div>
+
+
+
   </section>
+
+
+<style>
+
+  .product-details {
+    padding: 20px;
+    background-color: #f7f7f7;
+  }
+  
+  .product-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .product-description {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .product-price {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  </style>
 {{- end }}
+
