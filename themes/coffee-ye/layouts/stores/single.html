@@ -38,11 +38,14 @@
     <div class="flex flex-wrap">
       {{ range where .Site.RegularPages "Section" "stores" }}
           <div class="sm:w-1/4 md:px-4">
-            <div class="related-product">
-              <img src="{{ .Params.Cover.image }}" alt="Related Product Image">
-              <h3>{{ .Title }}</h3>
-              <!-- <p>{{ .Params.description }}</p> -->
-            </div>
+            <a href="{{ .Permalink }}" class="related-product-link">
+              <div class="related-product">
+                <img src="{{ .Params.Cover.image }}" alt="Related Product Image">
+                <h3>{{ .Title }}</h3>
+                <!-- <p>{{ .Params.description }}</p> -->
+              </div>
+            </a>
+
           </div>
       {{ end }}
     </div>
@@ -54,6 +57,37 @@
 
 
 <style>
+.related-product-link {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.related-product-link:hover {
+  transform: scale(1.05);
+}
+
+.related-product {
+  position: relative;
+}
+
+.related-product img {
+  width: 100%;
+  height: auto;
+}
+
+.related-product h3,
+.related-product p {
+  margin: 0;
+}
+.related-product-link:hover h3,
+.related-product-link:hover p {
+  color: #582f0e; /* Change the color to your desired hover color */
+}
+
+
+/* Add additional styling as needed */
 
   .product-details {
     padding: 20px;
